@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:#caa8a8;
+    color: rgb(33, 17, 122);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20rem;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+}
+
+.accordion {
+    background-color: #eee;
+    color: #be2828;
+    cursor: pointer;
+    padding: 20px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+  }
+  
+  .active, .accordion:hover {
+    background-color: #11576d;
+    color: #dbcaca;
+  }
+  
+  .accordion:after {
+    content: '\002B';
+    color: #130202;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2212";
+
+  }
+  
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    width: 17.7rem;
+  }
+
+
+  @media screen and (max-width: 600px) {
+
+
+    main {
+        width: 15rem;
+    }
+
+    .panel {
+        width: 12.7rem;
+      }
+}
+
+ 
